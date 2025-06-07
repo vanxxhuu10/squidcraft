@@ -31,7 +31,54 @@
 
     <!-- Register Further button below Yes/No (hidden initially) -->
     <div id="registerFurtherContainer" style="align-self: center;text-align:center; margin-top: 20px; display:none;">
-      <button id="registerFurtherBtn" class="popup-button" style="display: block; margin: 20px auto;">REGISTER</button>
+  <button id="registerFurtherBtn" class="popup-button" style="display: block; margin: 20px auto;">REGISTER</button>
+
+
+<div id="registerSuccessMessage" style="display: none; text-align: center; margin-top: 15px;">
+
+  <div class="roadmap-form">
+  <h2>Complete Your Registration</h2>
+
+  <div class="form-step">
+    <label for="teamName">Team Name</label>
+    <div class="input-wrapper">
+      <input type="text" id="teamName" />
+      <button onclick="markComplete('teamName')">✔️</button>
+      <img id="tick-teamName" class="tick-icon" src="" alt="✔" style="display:none;" />
+    </div>
+  </div>
+
+  <div class="form-step">
+    <label for="member1">Member 1 Name</label>
+    <div class="input-wrapper">
+      <input type="text" id="member1" />
+      <button onclick="markComplete('member1')">✔️</button>
+      <img id="tick-member1" class="tick-icon" src="" alt="✔" style="display:none;" />
+    </div>
+  </div>
+
+  <div class="form-step">
+    <label for="regNo">Registration Number</label>
+    <div class="input-wrapper">
+      <input type="text" id="regNo" />
+      <button onclick="markComplete('regNo')">✔️</button>
+      <img id="tick-regNo" class="tick-icon" src="" alt="✔" style="display:none;" />
+    </div>
+  </div>
+
+  <div class="form-step">
+    <label for="member2">Member 2 Name</label>
+    <div class="input-wrapper">
+      <input type="text" id="member2" />
+      <button onclick="markComplete('member2')">✔️</button>
+      <img id="tick-member2" class="tick-icon" src="" alt="✔" style="display:none;" />
+    </div>
+  </div>
+</div>
+
+
+  <p style="color: #28a745; font-size: 1.2rem;">✅ Registration Started. Go Ahead!</p>
+</div>
 
     </div>
 
@@ -41,7 +88,7 @@
   <!-- Yes popup image -->
   <div id="yesPopup" class="popup" style="display:none;">
     <h2 class="popup-heading">You Survived!</h2>
-    <img src="Yes-removebg-preview.png" alt="Survived" class="popup-image" />
+    <img src="yes.png" alt="Survived" class="popup-image" />
   </div>
 
   <!-- No popup image -->
