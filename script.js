@@ -174,7 +174,7 @@ registerBtn.addEventListener("click", () => {
 function markComplete(fieldId) {
   const input = document.getElementById(fieldId);
   const tick = document.getElementById(`tick-${fieldId}`);
-  const imageUrl = "Yes"; // Replace with your desired tick image link
+  const imageUrl = "yes.png"; // Replace with your desired tick image link
 
   if (input.value.trim() !== "") {
     tick.src = imageUrl;
