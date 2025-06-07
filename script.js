@@ -34,7 +34,7 @@ window.onload = () => {
     utterance.rate = 1;
     utterance.volume = 1;
 
-    const duration = 120;
+    const duration = 600;
     let timeLeft = duration;
     countdownElem.textContent = `Time left: ${timeLeft}s`;
 
@@ -77,11 +77,6 @@ window.onload = () => {
     noBtn.addEventListener("click", () => {
       noPopup.style.display = "block";
       document.body.classList.add("blur-background");
-    });
-
-    // Register further redirection
-    registerFurtherBtn.addEventListener("click", () => {
-      window.location.href = "register.html";
     });
 
   bgMusic.volume = 0.1;
@@ -161,3 +156,30 @@ document.getElementById("noBtn").addEventListener("click", () => {
 });
 
 
+const registerBtn = document.getElementById("registerFurtherBtn");
+const successMessage = document.getElementById("registerSuccessMessage");
+
+registerBtn.addEventListener("click", () => {
+  // Change button text
+  registerBtn.textContent = "Registration Started ✅";
+
+  // Show success message
+  successMessage.style.display = "block";
+
+  // Speak the message
+  const utterance = new SpeechSynthesisUtterance("Registration started, go ahead!");
+  speechSynthesis.speak(utterance);
+});
+
+function markComplete(fieldId) {
+  const input = document.getElementById(fieldId);
+  const tick = document.getElementById(`tick-${fieldId}`);
+  const imageUrl = "Yes"; // Replace with your desired tick image link
+
+  if (input.value.trim() !== "") {
+    tick.src = imageUrl;
+    tick.style.display = "inline-block";
+  } else {
+    tick.style.display = "none";
+  }
+}
